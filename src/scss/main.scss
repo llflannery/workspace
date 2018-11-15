@@ -1,0 +1,62 @@
+@import "~politico-style/scss/base/main.scss";
+
+.playlistItem { width: 100px; display: inline-block; }
+
+
+.slide {
+// position: absolute;
+// left: -100px;
+// width: 100px;
+// height: 100px;
+// background: blue;
+-webkit-animation: slide 0.5s forwards;
+// -webkit-animation-delay: 2s;
+animation: slide 0.5s forwards;
+// animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+100% { left: -1000; }
+}
+
+@keyframes slide {
+100% { left: -1000; }
+}
+
+#carousel {
+  width: 90%;
+  margin: auto;
+  // display: inline-block;
+
+  &::-webkit-scrollbar {
+  display: none;
+}
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-transform: translateZ(0px);
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-perspective: 1000;
+}
+
+.arrows { position: relative; }
+.arrow {
+  position: absolute;
+  bottom: 50%;
+
+  &.arrowleft { left: -2%; }
+  &.arrowright { right: -2%; }
+}
+
+.playlist_item {
+  max-width: 150px;
+  display: inline-block;
+  vertical-align: top;
+
+  img { width: 100%;}
+
+  .playlistHead { white-space: normal; }
+}
